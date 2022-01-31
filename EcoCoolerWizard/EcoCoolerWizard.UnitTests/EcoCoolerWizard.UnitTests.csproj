@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\eco-cooler-wizard.Core\eco-cooler-wizard.Core.csproj" />
+    <ProjectReference Include="..\EcoCoolerWizard.Core\EcoCoolerWizard.Core.csproj" />
   </ItemGroup>
 
 </Project>

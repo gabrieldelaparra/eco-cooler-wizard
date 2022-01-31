@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eco-cooler-wizard.UI.Blazor", "eco-cooler-wizard.UI.Blazor\eco-cooler-wizard.UI.Blazor.csproj", "{49BF27C9-2857-42EE-86AE-EDFCB575E7C7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoCoolerWizard.UI.Blazor", "EcoCoolerWizard.UI.Blazor\EcoCoolerWizard.UI.Blazor.csproj", "{49BF27C9-2857-42EE-86AE-EDFCB575E7C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eco-cooler-wizard.UI.BlazorWasm", "eco-cooler-wizard.UI.BlazorWasm\eco-cooler-wizard.UI.BlazorWasm.csproj", "{48BC0D5B-F38C-4E92-9993-01996B6CA158}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoCoolerWizard.UI.BlazorWasm", "EcoCoolerWizard.UI.BlazorWasm\EcoCoolerWizard.UI.BlazorWasm.csproj", "{48BC0D5B-F38C-4E92-9993-01996B6CA158}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eco-cooler-wizard.Core", "eco-cooler-wizard.Core\eco-cooler-wizard.Core.csproj", "{F9C7E2E1-ADF1-406B-98D0-456B1BF45BE6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoCoolerWizard.Core", "EcoCoolerWizard.Core\EcoCoolerWizard.Core.csproj", "{F9C7E2E1-ADF1-406B-98D0-456B1BF45BE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eco-cooler-wizard.UnitTests", "eco-cooler-wizard.UnitTests\eco-cooler-wizard.UnitTests.csproj", "{269F7797-82E2-4ED8-AE38-3397EE349C56}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoCoolerWizard.UnitTests", "EcoCoolerWizard.UnitTests\EcoCoolerWizard.UnitTests.csproj", "{269F7797-82E2-4ED8-AE38-3397EE349C56}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -8,7 +8,7 @@
     }
   },
   "profiles": {
-    "eco-cooler-wizard.UI.BlazorWasm": {
+    "EcoCoolerWizard.UI.BlazorWasm": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
