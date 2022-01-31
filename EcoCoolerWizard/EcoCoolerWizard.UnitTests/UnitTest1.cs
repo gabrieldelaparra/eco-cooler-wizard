@@ -1,10 +1,10 @@
-using eco_cooler_wizard.Core;
+using EcoCoolerWizard.Core;
 
 using FluentAssertions;
 
 using NUnit.Framework;
 
-namespace eco_cooler_wizard.UnitTests
+namespace EcoCoolerWizard.UnitTests
 {
     public class Tests
     {

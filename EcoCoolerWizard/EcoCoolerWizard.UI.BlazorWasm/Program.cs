@@ -1,4 +1,4 @@
-using eco_cooler_wizard.UI.BlazorWasm;
+using EcoCoolerWizard.UI.BlazorWasm;
 
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;

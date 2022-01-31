@@ -1,4 +1,4 @@
-﻿namespace eco_cooler_wizard.Core
+﻿namespace EcoCoolerWizard.Core
 {
     public class CoolerGeneratorInches : ICoolerGenerator
     {
