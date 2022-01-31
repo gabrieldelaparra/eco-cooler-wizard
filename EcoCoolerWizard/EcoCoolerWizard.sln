@@ -3,13 +3,27 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoCoolerWizard.UI.Blazor", "EcoCoolerWizard.UI.Blazor\EcoCoolerWizard.UI.Blazor.csproj", "{49BF27C9-2857-42EE-86AE-EDFCB575E7C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EcoCoolerWizard.UI.BlazorWasm", "EcoCoolerWizard.UI.BlazorWasm\EcoCoolerWizard.UI.BlazorWasm.csproj", "{48BC0D5B-F38C-4E92-9993-01996B6CA158}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoCoolerWizard.UI.BlazorWasm", "EcoCoolerWizard.UI.BlazorWasm\EcoCoolerWizard.UI.BlazorWasm.csproj", "{48BC0D5B-F38C-4E92-9993-01996B6CA158}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EcoCoolerWizard.Core", "EcoCoolerWizard.Core\EcoCoolerWizard.Core.csproj", "{F9C7E2E1-ADF1-406B-98D0-456B1BF45BE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoCoolerWizard.Core", "EcoCoolerWizard.Core\EcoCoolerWizard.Core.csproj", "{F9C7E2E1-ADF1-406B-98D0-456B1BF45BE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EcoCoolerWizard.UnitTests", "EcoCoolerWizard.UnitTests\EcoCoolerWizard.UnitTests.csproj", "{269F7797-82E2-4ED8-AE38-3397EE349C56}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoCoolerWizard.UnitTests", "EcoCoolerWizard.UnitTests\EcoCoolerWizard.UnitTests.csproj", "{269F7797-82E2-4ED8-AE38-3397EE349C56}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8F39D24D-99C8-478B-A507-E020CA3D275E}"
+	ProjectSection(SolutionItems) = preProject
+		Resources\Eco-Cooler.HowToMake.pdf = Resources\Eco-Cooler.HowToMake.pdf
+		Resources\EcoCooler1.png = Resources\EcoCooler1.png
+		Resources\EcoCooler2.png = Resources\EcoCooler2.png
+		Resources\EcoCooler3.png = Resources\EcoCooler3.png
+		Resources\EcoCooler4.png = Resources\EcoCooler4.png
+		Resources\EcoCooler5.png = Resources\EcoCooler5.png
+		Resources\EcoCooler6.png = Resources\EcoCooler6.png
+		Resources\EcoCooler7.png = Resources\EcoCooler7.png
+		Resources\EcoCooler8.jpg = Resources\EcoCooler8.jpg
+		Resources\EcoCooler9.png = Resources\EcoCooler9.png
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{42F7F2FE-7077-406C-9918-7FC6FC0450F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +31,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{49BF27C9-2857-42EE-86AE-EDFCB575E7C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{49BF27C9-2857-42EE-86AE-EDFCB575E7C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{49BF27C9-2857-42EE-86AE-EDFCB575E7C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{49BF27C9-2857-42EE-86AE-EDFCB575E7C7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{48BC0D5B-F38C-4E92-9993-01996B6CA158}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{48BC0D5B-F38C-4E92-9993-01996B6CA158}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48BC0D5B-F38C-4E92-9993-01996B6CA158}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -36,6 +46,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{42F7F2FE-7077-406C-9918-7FC6FC0450F4} = {8F39D24D-99C8-478B-A507-E020CA3D275E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A07B84FF-42B6-4286-AAB6-386CBFBE95FC}
