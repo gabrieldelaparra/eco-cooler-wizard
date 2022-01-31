@@ -9,10 +9,22 @@
 
 <button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
 
+@if (cooler != null)
+{
+    for (int i = 0; i < cooler.Rows; i++)
+    {
+        for (int j = 0; j < cooler.Columns; j++)
+        {
+            <p>$"Item {i} {j}"</p>
+        }
+        <br/>
+    }
+}
+
 @code {
     private int currentCount = 0;
 
-    private Cooler
+    private Cooler cooler = new CoolerGeneratorInches().GenerateCooler(31, 36);
 
     private void IncrementCount()
     {
