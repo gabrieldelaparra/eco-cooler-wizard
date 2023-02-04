@@ -36,7 +36,6 @@ namespace EcoCoolerWizard.Core
                         StrokeWidth = 1,
                     });
                 }
-
             }
 
             return svgDoc;

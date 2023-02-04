@@ -6,13 +6,8 @@ using NUnit.Framework;
 
 namespace EcoCoolerWizard.UnitTests
 {
-    public class Tests
+    public class CoolerGeneratorUnitTests
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         [Test]
         public void TestGenerateCoolerInchesPerSample()
         {
