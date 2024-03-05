@@ -2,6 +2,7 @@
 {
     public class Cooler : IRectangle
     {
+        public MeasureUnit MeasureUnit { get; set; }
         public double Width { get; set; }
         public double Height { get; set; }
         public int Rows { get; set; }
