@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using System.Text;
 using EcoCoolerWizard.Core;
@@ -18,6 +19,6 @@ public class CoolerDrawerUnitTests
         var stream = new MemoryStream();
         actual.Write(stream);
         var text = Encoding.UTF8.GetString(stream.GetBuffer());
-
+        File.WriteAllText($"EcoCoolerInches {DateTime.Now:yyyyMMdd-HHmmss}.svg", text);
     }
 }
