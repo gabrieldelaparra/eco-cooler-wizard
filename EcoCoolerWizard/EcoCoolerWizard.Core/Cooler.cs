@@ -1,6 +1,6 @@
 ﻿namespace EcoCoolerWizard.Core
 {
-    public class Cooler : IBox
+    public class Cooler : IRectangle
     {
         public double Width { get; set; }
         public double Height { get; set; }
