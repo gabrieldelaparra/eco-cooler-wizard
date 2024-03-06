@@ -28,6 +28,81 @@ namespace EcoCoolerWizard.Core
             var circlesGroup = new SvgGroup() { };
             svgDoc.Children.Add(circlesGroup);
 
+            var measuresGroup = new SvgGroup() { };
+            svgDoc.Children.Add(measuresGroup);
+            
+            var firstColumnLine = new SvgLine()
+            {
+                StartX = 0,
+                EndX = 0,
+                StartY = (float) -(margin * m / 4),
+                EndY = (float) -(margin * m / 2),
+                Stroke = new SvgColourServer(Color.GreenYellow),
+                StrokeWidth = 1,
+            };
+            measuresGroup.Children.Add(firstColumnLine);
+
+            var lastColumnLine = new SvgLine()
+            {
+                StartX = width * m,
+                EndX = width * m,
+                StartY = (float) -(margin * m / 4),
+                EndY = (float) -(margin * m / 2),
+                Stroke = new SvgColourServer(Color.GreenYellow),
+                StrokeWidth = 1,
+            };
+            measuresGroup.Children.Add(lastColumnLine);
+            
+            var firstRowLine = new SvgLine()
+            {
+                StartX = (float) -(margin * m / 4),
+                EndX = (float) -(margin * m / 2),
+                StartY = 0,
+                EndY = 0,
+                Stroke = new SvgColourServer(Color.GreenYellow),
+                StrokeWidth = 1,
+            };
+            measuresGroup.Children.Add(firstRowLine);
+
+            var lastRowLine = new SvgLine()
+            {
+                StartX = (float) -(margin * m / 4),
+                EndX = (float) -(margin * m / 2),
+                StartY = height * m,
+                EndY = height * m,
+                Stroke = new SvgColourServer(Color.GreenYellow),
+                StrokeWidth = 1,
+            };
+            measuresGroup.Children.Add(lastRowLine);
+
+            for (int i = 0; i < cooler.Columns; i++)
+            {
+                var columnLine = new SvgLine()
+                {
+                    StartX = (float) cooler.MarginLeft * m + (i * m * (float) cooler.HorizontalGap),
+                    EndX = (float) cooler.MarginLeft * m + (i * m * (float) cooler.HorizontalGap),
+                    StartY = (float) -(margin * m / 4),
+                    EndY = (float) -(margin * m / 2),
+                    Stroke = new SvgColourServer(Color.GreenYellow),
+                    StrokeWidth = 1,
+                };
+                measuresGroup.Children.Add(columnLine);
+            }
+
+            for (int j = 0; j < cooler.Rows; j++)
+            {
+                var rowLine = new SvgLine()
+                {
+                    StartX = (float) -(margin * m / 4),
+                    EndX = (float) -(margin * m / 2),
+                    StartY = (float) cooler.MarginTop * m + (j * m * (float) cooler.VerticalGap),
+                    EndY = (float) cooler.MarginTop * m + (j * m * (float) cooler.VerticalGap),
+                    Stroke = new SvgColourServer(Color.GreenYellow),
+                    StrokeWidth = 1,
+                };
+                measuresGroup.Children.Add(rowLine);
+            }
+
             for (int i = 0; i < cooler.Columns; i++)
             {
                 for (int j = 0; j < cooler.Rows; j++)
@@ -35,8 +110,7 @@ namespace EcoCoolerWizard.Core
                     circlesGroup.Children.Add(new SvgCircle
                     {
                         Radius = new SvgUnit((float) cooler.CapRatio * m),
-                        CenterX = new SvgUnit(
-                            (float) cooler.MarginLeft * m + (i * m * (float) cooler.HorizontalGap)),
+                        CenterX = new SvgUnit((float) cooler.MarginLeft * m + (i * m * (float) cooler.HorizontalGap)),
                         CenterY = new SvgUnit((float) cooler.MarginTop * m + (j * m * (float) cooler.VerticalGap)),
                         Fill = new SvgColourServer(Color.Transparent),
                         Stroke = new SvgColourServer(Color.Black),
@@ -54,9 +128,6 @@ namespace EcoCoolerWizard.Core
                 Width = width * m,
                 Height = height * m
             });
-
-            var measuresGroup = new SvgGroup() { };
-            svgDoc.Children.Add(measuresGroup);
 
             var totalHorizontalLine = new SvgLine()
             {
@@ -77,7 +148,7 @@ namespace EcoCoolerWizard.Core
                 TextAnchor = SvgTextAnchor.Middle,
             };
             measuresGroup.Children.Add(totalHorizontalMeasure);
-
+            
             var totalVerticalLine = new SvgLine()
             {
                 StartY = 0,
@@ -88,7 +159,7 @@ namespace EcoCoolerWizard.Core
                 StrokeWidth = 1,
             };
             measuresGroup.Children.Add(totalVerticalLine);
-
+            
             var totalVerticalMeasure = new SvgText($"{cooler.Height}")
             {
                 X = new SvgUnitCollection() {new SvgUnit((totalVerticalLine.StartX + totalVerticalLine.EndX) / 2f)},
