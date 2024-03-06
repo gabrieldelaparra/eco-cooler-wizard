@@ -3,18 +3,50 @@
 
 <PageTitle>Eco Cooler Wizard</PageTitle>
 
-<MudSlider @bind-Value="@WidthValue" Min="1" Max="500" Step="1" Variant="Variant.Filled">Width: @WidthValue</MudSlider>
-<MudSlider @bind-Value="@HeightValue" Min="1" Max="500" Step="1" Variant="Variant.Filled">Height: @HeightValue</MudSlider>
+<MudContainer MaxWidth="MaxWidth.ExtraLarge">
+    
+    <div class="d-flex justify-content-center">
+        <h1>Eco Cooler Wizard</h1>
+    </div>
 
-<p/>
-@MarkupString
+    <div class="d-flex flex-row flex-grow-0 gap-4 justify-content-center ">
+        <div class="d-flex flex-column flex-grow-0 gap-4 py-12">
+            <MudNumericField @bind-Value="@WidthValue" Label="Width"/>
+            <MudSlider @bind-Value="@WidthValue" Min="5" Max="200" Step="1" Variant="Variant.Filled"/>
+        </div>
+        <div class="d-flex flex-column flex-grow-0 gap-4 py-12">
+            <MudNumericField @bind-Value="@HeightValue" Label="Height"/>
+            <MudSlider @bind-Value="@HeightValue" Min="5" Max="200" Step="1" Variant="Variant.Filled"/>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-center">
+        <p/>
+        @MarkupString
+    </div>
+
+    <div class="d-flex justify-content-center pa-4">
+        Credits: 1)<MudLink href="https://www.youtube.com/watch?v=op_TO0wP4kI">Grey Dhaka</MudLink> 2)<MudLink href="https://www.solarpedia.info/inventos-ecologicos-caseros/eco-conkoler-aire-acondicionado-con-botellas-de-plastico/">Solarpedia</MudLink> 3)<MudLink href="https://inhabitat.com/this-amazing-bangladeshi-air-cooler-is-mnkade-from-plastic-bottles-and-uses-no-electricity/">Inhabitat</MudLink>
+    </div>
+
+    <div class="d-flex justify-content-center pa-12">
+        <h3>How it should look</h3>
+    </div>
+
+</MudContainer>
+
+<div class="d-flex flex-row flex-grow-0 gap-4 justify-content-center py-8">
+    <MudImage Src="images/EcoCooler8.jpg" Alt="Render" Class="rounded-lg"/>
+    <MudImage Src="images/EcoCooler9.png" Alt="Sample" Class="rounded-lg"/>
+</div>
+
 
 @code{
 
     MarkupString MarkupString => (MarkupString) _svg;
     string _svg = "";
-    public double _widthValue = 31;
-    public double _heightValue = 36;
+    private double _widthValue = 31;
+    private double _heightValue = 36;
 
     protected override void OnInitialized()
     {
@@ -22,7 +54,7 @@
         base.OnInitialized();
     }
 
-    public double WidthValue
+    private double WidthValue
     {
         get => _widthValue;
         set {
@@ -30,7 +62,7 @@
             CreateSvg();
         }
     }
-    public double HeightValue
+    private double HeightValue
     {
         get => _heightValue;
         set {

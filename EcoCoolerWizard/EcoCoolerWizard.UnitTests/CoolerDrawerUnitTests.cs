@@ -12,7 +12,7 @@ public class CoolerDrawerUnitTests
     public void TestConvertToSvg()
     {
         var generator = new CoolerGeneratorInches();
-        var cooler = generator.GenerateCooler(31, 36);
+        var cooler = generator.GenerateCooler(131, 36);
         var drawer = new CoolerDrawer();
         var actual = drawer.Draw(cooler);
 
