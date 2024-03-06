@@ -1,5 +1,8 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Text;
 using Svg;
 
 //Move this out from Core.
@@ -7,6 +10,20 @@ namespace EcoCoolerWizard.Core
 {
     public class CoolerDrawer
     {
+        public string GetMarkupString(SvgDocument svgDocument)
+        {
+            var svgString = "";
+
+            using (var stream = new MemoryStream()) {
+                svgDocument.Write(stream);
+                var text = Encoding.UTF8.GetString(stream.ToArray());
+                var textList = text.Split(Environment.NewLine.ToArray(), StringSplitOptions.RemoveEmptyEntries);
+                svgString = string.Join(Environment.NewLine, textList.Skip(2));
+            }
+
+            return svgString;
+        }
+
         public SvgDocument Draw(Cooler cooler)
         {
             var width = (int) cooler.Width;

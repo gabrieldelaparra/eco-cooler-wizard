@@ -1,0 +1,54 @@
+﻿@page "/"
+@using EcoCoolerWizard.Core
+
+<PageTitle>Eco Cooler Wizard</PageTitle>
+
+<MudSlider @bind-Value="@WidthValue" Min="1" Max="500" Step="1" Variant="Variant.Filled">Width: @WidthValue</MudSlider>
+<MudSlider @bind-Value="@HeightValue" Min="1" Max="500" Step="1" Variant="Variant.Filled">Height: @HeightValue</MudSlider>
+
+<p/>
+@MarkupString
+
+@code{
+
+    MarkupString MarkupString => (MarkupString) _svg;
+    string _svg = "";
+    public double _widthValue = 31;
+    public double _heightValue = 36;
+
+    protected override void OnInitialized()
+    {
+        CreateSvg();
+        base.OnInitialized();
+    }
+
+    public double WidthValue
+    {
+        get => _widthValue;
+        set {
+            _widthValue = value;
+            CreateSvg();
+        }
+    }
+    public double HeightValue
+    {
+        get => _heightValue;
+        set {
+            _heightValue = value;
+            CreateSvg();
+        }
+    }
+
+    private void CreateSvg()
+    {
+        var generator = new CoolerGeneratorInches();
+        var cooler = generator.GenerateCooler(WidthValue, HeightValue);
+        var drawer = new CoolerDrawer();
+        var actual = drawer.Draw(cooler);
+
+        _svg = drawer.GetMarkupString(actual);
+
+        StateHasChanged();
+    }
+
+}

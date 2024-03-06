@@ -16,9 +16,8 @@ public class CoolerDrawerUnitTests
         var drawer = new CoolerDrawer();
         var actual = drawer.Draw(cooler);
 
-        var stream = new MemoryStream();
-        actual.Write(stream);
-        var text = Encoding.UTF8.GetString(stream.GetBuffer());
+        var text = drawer.GetMarkupString(actual);
+        
         File.WriteAllText($"EcoCoolerInches {DateTime.Now:yyyyMMdd-HHmmss}.svg", text);
         File.WriteAllText("EcoCoolerInches.svg", text);
     }
