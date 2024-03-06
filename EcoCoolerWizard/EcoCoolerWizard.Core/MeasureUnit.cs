@@ -4,7 +4,7 @@
     {
         //Centimeter
         Metric,
-        
+
         //Inches
         Imperial
     }

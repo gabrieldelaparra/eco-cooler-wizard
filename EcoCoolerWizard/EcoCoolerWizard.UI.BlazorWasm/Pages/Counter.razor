@@ -3,7 +3,7 @@
 
 <PageTitle>Eco Cooler Helper</PageTitle>
 
-<SvgComponent Width="200" Height="200" @ref="svgComponent" />
+<SvgComponent Width="200" Height="200" @ref="svgComponent"/>
 
 @code {
 
@@ -13,24 +13,21 @@
 
     private void RenderCooler()
     {
-        var circle = new SvgCircle
-            {
-                CenterX = 100,
-                CenterY = 100,
-                Radius = 100,
-                Fill = new SvgFill
-                {
-                    Color = "#FF2800",
-                },
-            };
+        var circle = new SvgCircle {
+            CenterX = 100,
+            CenterY = 100,
+            Radius = 100,
+            Fill = new SvgFill {
+                Color = "#FF2800"
+            }
+        };
 
         svgComponent.Add(circle);
     }
 
     protected override void OnAfterRender(bool firstRender)
     {
-        if (firstRender)
-        {
+        if (firstRender) {
             loadSVG();
             RenderCooler();
         }
@@ -44,4 +41,5 @@
     protected override async Task OnInitializedAsync()
     {
     }
+
 }

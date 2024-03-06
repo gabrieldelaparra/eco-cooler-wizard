@@ -2,9 +2,6 @@
 {
     public class Cooler : IRectangle
     {
-        public MeasureUnit MeasureUnit { get; set; }
-        public double Width { get; set; }
-        public double Height { get; set; }
         public int Rows { get; set; }
         public int Columns { get; set; }
         public double HorizontalGap { get; set; } = 5;
@@ -14,5 +11,8 @@
         public double MarginRight { get; set; }
         public double MarginTop { get; set; }
         public double MarginBottom { get; set; }
+        public MeasureUnit MeasureUnit { get; set; }
+        public double Width { get; set; }
+        public double Height { get; set; }
     }
 }

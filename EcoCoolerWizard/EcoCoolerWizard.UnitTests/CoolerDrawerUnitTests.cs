@@ -20,6 +20,6 @@ public class CoolerDrawerUnitTests
         actual.Write(stream);
         var text = Encoding.UTF8.GetString(stream.GetBuffer());
         File.WriteAllText($"EcoCoolerInches {DateTime.Now:yyyyMMdd-HHmmss}.svg", text);
-        File.WriteAllText($"EcoCoolerInches.svg", text);
+        File.WriteAllText("EcoCoolerInches.svg", text);
     }
 }
