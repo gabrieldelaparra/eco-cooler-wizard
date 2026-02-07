@@ -4,41 +4,49 @@
 <PageTitle>Eco Cooler Wizard</PageTitle>
 
 <MudContainer MaxWidth="MaxWidth.ExtraLarge">
-    
-    <div class="d-flex justify-content-center">
-        <h1>Eco Cooler Wizard</h1>
-    </div>
+    <!-- Use MudGrid so layout stacks on small screens and is side-by-side on larger screens -->
+    <MudGrid Spacing="3">
+        <MudItem xs="12">
+            <div class="d-flex justify-content-center">
+                <h1>Eco Cooler Wizard</h1>
+            </div>
+        </MudItem>
 
-    <div class="d-flex flex-row flex-grow-0 gap-4 justify-content-center ">
-        <div class="d-flex flex-column flex-grow-0 gap-4 py-12">
-            <MudNumericField @bind-Value="@WidthValue" Label="Width"/>
-            <MudSlider @bind-Value="@WidthValue" Min="5" Max="200" Step="1" Variant="Variant.Filled"/>
-        </div>
-        <div class="d-flex flex-column flex-grow-0 gap-4 py-12">
-            <MudNumericField @bind-Value="@HeightValue" Label="Height"/>
-            <MudSlider @bind-Value="@HeightValue" Min="5" Max="200" Step="1" Variant="Variant.Filled"/>
-        </div>
-    </div>
+        <MudItem xs="12" md="6">
+            <div class="d-flex flex-column gap-4 pa-2">
+                <MudNumericField @bind-Value="@WidthValue" Label="Width"/>
+                <MudSlider @bind-Value="@WidthValue" Min="5" Max="200" Step="1" Variant="Variant.Filled"/>
+            </div>
+        </MudItem>
 
-    <div class="d-flex justify-content-center">
-        <p/>
-        @MarkupString
-    </div>
+        <MudItem xs="12" md="6">
+            <div class="d-flex flex-column gap-4 pa-2">
+                <MudNumericField @bind-Value="@HeightValue" Label="Height"/>
+                <MudSlider @bind-Value="@HeightValue" Min="5" Max="200" Step="1" Variant="Variant.Filled"/>
+            </div>
+        </MudItem>
 
-    <div class="d-flex justify-content-center pa-4">
-        Credits: 1)<MudLink href="https://www.youtube.com/watch?v=op_TO0wP4kI">Grey Dhaka</MudLink> 2)<MudLink href="https://www.solarpedia.info/inventos-ecologicos-caseros/eco-conkoler-aire-acondicionado-con-botellas-de-plastico/">Solarpedia</MudLink> 3)<MudLink href="https://inhabitat.com/this-amazing-bangladeshi-air-cooler-is-mnkade-from-plastic-bottles-and-uses-no-electricity/">Inhabitat</MudLink>
-    </div>
+        <MudItem xs="12">
+            <div class="d-flex justify-content-center">
+                @MarkupString
+            </div>
+        </MudItem>
 
-    <div class="d-flex justify-content-center pa-12">
-        <h3>How it should look</h3>
-    </div>
+        <MudItem xs="12" md="6">
+            <div class="d-flex justify-content-center pa-2">
+                Credits: 1)<MudLink href="https://www.youtube.com/watch?v=op_TO0wP4kI">Grey Dhaka</MudLink> 2)<MudLink href="https://www.solarpedia.info/inventos-ecologicos-caseros/eco-conkoler-aire-acondicionado-con-botellas-de-plastico/">Solarpedia</MudLink> 3)<MudLink href="https://inhabitat.com/this-amazing-bangladeshi-air-cooler-is-mnkade-from-plastic-bottles-and-uses-no-electricity/">Inhabitat</MudLink>
+            </div>
+        </MudItem>
 
+        <MudItem xs="12" md="6">
+            <div class="d-flex gap-4 justify-content-center pa-2" style="flex-wrap:wrap;">
+                <MudImage Src="images/EcoCooler8.jpg" Alt="Render" Class="rounded-lg" Style="max-width:100%; height:auto; width:400px;"/>
+                <MudImage Src="images/EcoCooler9.png" Alt="Sample" Class="rounded-lg" Style="max-width:100%; height:auto; width:400px;"/>
+            </div>
+        </MudItem>
+
+    </MudGrid>
 </MudContainer>
-
-<div class="d-flex flex-row flex-grow-0 gap-4 justify-content-center py-8">
-    <MudImage Src="images/EcoCooler8.jpg" Alt="Render" Class="rounded-lg"/>
-    <MudImage Src="images/EcoCooler9.png" Alt="Sample" Class="rounded-lg"/>
-</div>
 
 
 @code{
